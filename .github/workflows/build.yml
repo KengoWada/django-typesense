@@ -62,7 +62,7 @@ jobs:
 
       - name: Run tests
         run: |
-          coverage run -m python runtests.py
+          coverage run -m runtests.py
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
