@@ -45,7 +45,7 @@ TEMPLATES = [
 
 TYPESENSE = {
     "api_key": "sample_key",
-    "nodes": [{"host": "localhost", "protocol": "http", "port": "8108"}],
+    "nodes": [{"host": "typesense", "protocol": "http", "port": "8108"}],
 }
 
 USE_TZ = True
