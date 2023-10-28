@@ -9,10 +9,10 @@ from typing import Iterable, Union, Dict, List
 from django.db.models import QuerySet
 from django.utils.functional import cached_property
 
-try:
-    from django.utils.functional import classproperty
-except ImportError:
+if django.VERSION < (3, 1):
     from django.utils.decorators import classproperty
+else:
+    from django.utils.functional import classproperty
 
 from typesense.exceptions import ObjectNotFound, ObjectAlreadyExists
 from django_typesense.fields import TypesenseField, TypesenseCharField
